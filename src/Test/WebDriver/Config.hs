@@ -58,7 +58,7 @@ instance Default WDConfig where
     , wdAuthHeaders       = []
     , wdCapabilities      = def
     , wdHistoryConfig     = unlimitedHistory
-    , wdBasePath          = "/wd/hub"
+    , wdBasePath          = ""
     , wdHTTPManager       = Nothing
     , wdHTTPRetryCount    = 0
     }

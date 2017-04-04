@@ -73,8 +73,7 @@ mkRequest meth wdPath args = do
     , requestHeaders = wdSessRequestHeaders
                        ++ [ (hAccept, "application/json;charset=UTF-8")
                           , (hContentType, "application/json;charset=UTF-8") ]
-    , method = meth 
-    , checkStatus = \_ _ _ -> Nothing }
+    , method = meth }
 
 -- |Sends an HTTP request to the remote WebDriver server
 sendHTTPRequest :: (WDSessionStateIO s) => Request -> s (Either SomeException (Response ByteString))
